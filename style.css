@@ -1,0 +1,907 @@
+/* ----------------全体の設定ここから---------------- */
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* font-family: 'Lora', serif; */
+	font-family: 'DotGothic16', sans-serif;
+	font-size: 24px;
+	line-height: 2;
+	background-color: #FDD8FA;
+}
+
+
+
+
+#korean-body {
+	font-family: 'Jua', sans-serif;
+}
+
+
+
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+
+#splash {
+	/*fixedで全面に固定*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background: #FDD8FA;
+	text-align: center;
+	color: #ffffff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #ffffff;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg {
+	height: 2px;
+}
+
+ul,
+ol {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	opacity: 0.6;
+}
+
+h1 {
+	font-size: 50px;
+	letter-spacing: 0.08em;
+	padding-bottom: 10px;
+	line-height: 1;
+	text-align: center;
+	color: #fff;
+
+}
+
+h2 {
+
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+h3 {
+
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.skill-name,
+.banner-name,
+.web-name,
+.video-name {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+/* ----------------全体の設定ここまで---------------- */
+
+
+/* ヘッダーここから */
+
+header {
+	background-color: #BB87EF;
+	width: 100%;
+	height: 100px;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+.top-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+header .pc-nav {
+	height: 100%;
+}
+
+header .pc-nav ul {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: #fff;
+}
+
+
+/* フッターここから */
+
+footer {
+	height: 44px;
+	background-color: #BB87EF;
+	font-size: 12px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+}
+
+
+/* メインここから */
+
+.top-hero {
+	background-image: url(../images/main-visual-test.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 560px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+	color: #333;
+}
+
+.top-hero p {
+	font-size: 50px;
+	text-align: center;
+	line-height: 1;
+	padding-top: 10px;
+	letter-spacing: 2px;
+}
+
+
+/* プロフィールここから */
+
+.profile-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+.profile-box p {
+	width: 60%;
+}
+
+.profile-name {
+	font-size: 24px;
+	margin-right: 1em;
+}
+
+.profile-box figure img {
+	width: 256px;
+}
+
+
+/* スキルここから */
+
+.skill-box ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 32px;
+}
+
+.skill-box li {
+	width: calc((100% - 96px) / 4);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.skill-box figure img {
+	width: 128px;
+}
+
+
+/* デザインここから */
+
+
+/* バナーここから */
+
+#design {
+	margin-bottom: 100px;
+}
+
+.design-wrapper {
+	background-color: #ededed;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.banner-box {
+	margin-bottom: 50px;
+}
+
+/* disply:gridの場合 */
+/* .banner-box ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 30px;
+	place-content: center;
+} */
+
+.banner-box li {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+/* disply:flexの場合 */
+
+/* .banner-box ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.banner-box li {
+    width: calc((100% - 60px) / 3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.banner-box figure img {
+	width: 100px;
+}
+
+/* ウェブここから */
+
+.web-box ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 32px;
+}
+
+.web-box li {
+	width: calc((100% - 32px) / 2);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.web-box figure img {
+	width: 464px;
+}
+
+
+/* ビデオここから */
+
+video {
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+.video-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* ライクここから */
+
+
+
+.slick-slide {
+	margin-right: 30px;
+}
+
+/* ハンバーガーメニューここから */
+.pc-nav {
+	display: block;
+}
+
+.sp-nav {
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	right: -120%;
+	width: 100%;
+	height: 100vh;
+	background: #999;
+	transition: all 0.6s;
+}
+
+.sp-nav.panelactive {
+	right: 0;
+}
+
+
+.sp-nav ul {
+	position: absolute;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.sp-nav li {
+	list-style: none;
+	text-align: center;
+}
+
+.sp-nav li a {
+	color: #333;
+	text-decoration: none;
+	padding: 10px;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: bold;
+}
+
+.sp-open-btn {
+	position: fixed;
+	z-index: 9999;
+	top: 0px;
+	right: 10px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	display: none;
+}
+
+.sp-open-btn span {
+	display: inline-block;
+	transition: all 0.4s;
+	position: absolute;
+	left: 14px;
+	height: 3px;
+	border-radius: 2px;
+	background-color: #fff;
+	width: 45%;
+}
+
+.sp-open-btn span:nth-of-type(1) {
+	top: 15px;
+}
+
+.sp-open-btn span:nth-of-type(2) {
+	top: 23px;
+}
+
+.sp-open-btn span:nth-of-type(3) {
+	top: 31px;
+}
+
+.sp-open-btn.active span:nth-of-type(1) {
+	top: 18px;
+	left: 18px;
+	transform: translateY(6px) rotate(-45deg);
+	width: 30%;
+}
+
+.sp-open-btn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.sp-open-btn.active span:nth-of-type(3) {
+	top: 30px;
+	left: 18px;
+	transform: translateY(-6px) rotate(45deg);
+	width: 30%;
+}
+
+body.active {
+	height: 100%;
+	overflow: hidden;
+}
+
+/* コンテンツフェードインここから */
+.effect-fade {
+	opacity: 0;
+	transform: translate(0, 100px);
+	transition: all 2000ms;
+}
+
+.effect-scroll {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* ーーーーーーーーーーーーーPC版新しいCSSここからーーーーーーーーーーーーー */
+#main p {
+	color: #4E2D1C;
+}
+
+.pc-nav {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 110px;
+	font-size: 40px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+}
+
+
+
+.main-box {
+	height: calc(100vh - (48px + 44px));
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.main-left-box img,
+.main-right-box img {
+	width: 100px;
+}
+
+.main-left-box a {
+	position: relative;
+	top: 0;
+}
+
+.select-btn a {
+	position: relative;
+	top: 0;
+}
+
+.main-right-box a {
+	position: relative;
+	top: 0;
+}
+
+.main-left-box a:hover {
+	top: -8px;
+	transition: 0.1s;
+}
+
+.select-btn a:hover {
+	top: -8px;
+	transition: 0.1s;
+}
+
+.main-right-box a:hover {
+	top: -8px;
+	transition: 0.1s;
+}
+
+
+.main-left-box,
+.main-right-box {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+
+.main-left-box li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.main-right-box li {
+	align-items: center;
+	text-align: center;
+}
+
+.select-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	gap: 100px;
+	padding: 0 100px;
+}
+
+
+.select-btn li {
+	border: 1px solid #4E2D1C;
+	width: 200px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: none;
+	color: #4E2D1C;
+}
+
+.select-btn-right li {
+	font-family: 'Jua', sans-serif;
+}
+
+/*----------------プロフィールここから---------------*/
+
+.recieve-mail {
+	color: #4E2D1C;
+	font-size: 40px;
+}
+
+
+.recieve-mail figure img {
+	width: 60px;
+	height: 60px;
+	margin-left: auto;
+	display: block;
+	padding-right: 30px;
+}
+
+.subject {
+	padding-left: 110px;
+	height: auto;
+}
+
+#top-mail {
+	color: #4E2D1C;
+	font-size: 28px;
+	justify-content: left;
+	background-color: #ffffff;
+}
+
+.to span {
+	letter-spacing: 0.5em;
+}
+
+.sub span {
+	letter-spacing: 0.15em;
+}
+
+.sub-name span {
+	letter-spacing: 1em;
+}
+
+#profile1 {
+	background-color: #FCFFEB;
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.profile-box1 {
+	color: #4E2D1C;
+}
+
+.profile-box1 img {
+	width: 250px;
+	height: 250px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.profile-name1 {
+	font-size: 24px;
+}
+
+
+
+.profile-content {
+	font-size: 14px;
+	margin-top: 30px;
+	width: 530px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+/* スキルここから */
+
+#top-mail {
+	background-color: #ffffff;
+}
+
+#skill {
+	padding-bottom: 60px;
+	background-color: #FCFFEB;
+}
+
+.skill-box2 figure img {
+	width: 571px;
+	height: 295px;
+	display: block;
+	padding-bottom: 30px;
+	padding-top: 40px;
+	justify-content: center;
+}
+
+.skill-box2 .skill-name {
+	font-size: 20px;
+	color: #4E2D1C;
+	text-align: center;
+}
+
+.skill-box2 p {
+	font-size: 14px;
+	color: #4E2D1C;
+	text-align: left;
+	width: 300px;
+}
+
+.skill-box2 li {
+	position: relative;
+}
+
+.left-box {
+	margin-right: auto;
+	width: 600px;
+}
+
+.right-box {
+	margin-left: auto;
+	width: 600px;
+}
+
+.skill-box2 div {
+	position: absolute;
+	top: 100px;
+	left: 250px;
+	z-index: 99px;
+}
+
+.box {
+	opacity: 0;
+}
+
+.fadeUp {
+	animation-name: fadeUpAnime;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* デザインここから */
+
+
+
+#top-mail {
+	background-color: #fff;
+
+}
+
+#Design {
+	background-color: #FCFFEB;
+	padding-bottom: 60px;
+}
+
+.Design-box p {
+	width: 530px;
+	text-align: center;
+	display: block;
+}
+
+.Design-box .application1,
+.Design-box .application2,
+.Design-box .application3 {
+	font-size: 40px;
+	/* margin-top: 20px; */
+	margin-left: 110px;
+
+}
+
+.Design-box figure img {
+	width: 50%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.Design-box .design-name {
+	font-size: 24px;
+	color: #4E2D1C;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.Design-box p {
+	font-size: 14px;
+	color: #4E2D1C;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+
+.Design-box li {
+	padding-bottom: 60px;
+}
+
+.design-under-line {
+	border-bottom: 3px solid #BB87EF;
+}
+
+
+/* ビデオここから */
+
+#video {
+	background-color: #FCFFEB;
+	text-align: center;
+	padding-bottom: 60px;
+
+}
+
+.video-box video {
+	justify-content: center;
+	width: 50%;
+	margin-top: 40px;
+	margin-bottom: 0px;
+}
+
+.video-box .video-name {
+	font-size: 24px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+}
+
+.video-box p {
+	font-size: 14px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 530px;
+}
+
+/* ライクここから */
+
+.slick-slider img {
+	width: 400px;
+	height: 320px;
+	margin-top: 160px;
+	margin-bottom: 160px;
+}
+
+#like1 {
+	background-color: #FCFFEB;
+
+}
+
+.video-box {
+	color: #4E2D1C;
+	font-size: 14px;
+}
+
+
+
+/* -----------------スマートフォン版ここから----------------- */
+
+@media (max-width:520px) {
+	h1 {
+		font-size: 60px;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	.top-hero p {
+		font-size: 37px;
+	}
+
+	.container {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	/* プロフィールここから */
+	.profile-box {
+		flex-direction: column-reverse;
+	}
+
+	.profile-name p span {
+		font-size: 24px;
+	}
+
+	.profile-box figure img {
+		width: 100%;
+	}
+
+	.profile-box p {
+		width: 100%;
+	}
+
+	/* スキルここから */
+
+	.skill-box li {
+		width: calc((100% - 110px) / 2);
+	}
+
+
+
+
+
+	/* デザインここから */
+
+
+
+
+	/* flexで並べた場合 */
+	/* .banner-box li {
+		width: 100%;
+	}
+
+	.banner-box figure img {
+		width: 100%;
+	} */
+
+	.web-box ul {
+		flex-direction: column;
+	}
+
+	.web-box li {
+		width: 100%;
+	}
+
+	/* ビデオここから */
+
+	video {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	/* ライクここから */
+	.slick-slide {
+		margin-right: 0;
+	}
+
+	.slick-slide img {
+		width: 100%;
+	}
+
+	/* ハンバーガーメニューここから */
+	.pc-nav {
+		display: none;
+	}
+
+	.sp-open-btn {
+		display: block;
+	}
+
+}
